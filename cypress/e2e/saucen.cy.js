@@ -14,5 +14,6 @@ describe('sauce demo website', () => {
 
       cy.get('[data-test="login-button"]').click();
 
+      cy.get('#error-message').should('contain.text', 'Epic sadface: Username and password do not match any user in this service');
     })
   })
